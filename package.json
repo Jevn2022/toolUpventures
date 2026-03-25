@@ -1,0 +1,14 @@
+{
+  "name": "upventures",
+  "version": "1.0.0",
+  "description": "UpVentures Tech Venture Studio website",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "test": "npx nightwatch tests/e2e.js"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "nightwatch": "^3.3.0",
+    "chromedriver": "^120.0.0"
+  }
+}

@@ -1,0 +1,58 @@
+# Versioni vecchie
+upventures-v4.html
+upventures-v6.html
+
+# Documenti interni
+brand/Brand_Identity.pdf
+*.pdf
+18c0e80e-30e8-4ea6-966f-ea8c06c4c51f_Brand_Identity.pdf
+1bb131c0-ac10-4470-ad4b-9214cd11eba7_Feedbacks_Sito.pdf
+
+# File brand non usati nel sito
+brand/Banner.png
+brand/Banner.pptx
+brand/brand_identity.md
+brand/color_palette_usage_guide.md
+brand/idea exec.png
+brand/Social Servizi
+brand/Social Servizi.pptx
+brand/UpVentures_palette.md
+brand/UpVentures_palette.png
+
+# Immagini non usate nel sito
+brand/images/6 Tips for Better Shore Diving _ Scuba Diving.jpg
+brand/images/662c37672366b80de18216cb491aae6f.jpg
+brand/images/8648c886a16c44dbfe99d2d0e9d8e9e0.jpg
+brand/images/2d0f9d23551808cb278ff019ca992140.jpg
+brand/images/f9fa878059590ef45cec319f9809c787.jpg
+brand/images/Alpamayo, Cordillera Blanca, Peru - Photograph by….jpg
+brand/images/Arrampicata Su Ghiaccio.jpg
+brand/images/Braveness____.jpg
+brand/images/Cave Diving and Technical Diving Adventures….jpg
+brand/images/Climb Mount Everest - North Ridge with Adventure….jpg
+brand/images/Deepest Underwater Cave Discovered Hranická….jpg
+brand/images/Dos Ojos, Tulum, Mexico ~   This cavernous cenote….jpg
+brand/images/download (1).jpg
+brand/images/Experience the magic of extreme skiing in an….jpg
+brand/images/Hayley Gendron on Instagram_ "The past year has….jpg
+brand/images/mu-neutrino_  Cristobal Senoret on the 4th ascent….jpg
+brand/images/Paragliding flight, wallpaper, painting ideas, art….jpg
+brand/images/Parcs aventures aériens et Tyroliennes à Corse….jpg
+brand/images/proposta 2.jpg
+brand/images/Rock-Climbing.jpg
+brand/images/Sasha cracking up.jpg
+brand/images/Shoestring Gully on Mount Webster in New….jpg
+brand/images/Technical Diving Myths vs_ Reality.jpg
+brand/images/The Crow's Nest Extended Rooftop Tent by Feldon….jpg
+brand/images/The Totem Pole.jpg
+brand/images/Thomas Eichberger 🇦🇹 Athlete on Instagram_ "It….jpg
+brand/images/Two climbers in California's Yosemite national….jpg
+brand/images/Uncover 10 breathtaking mountain hiking trips in….jpg
+brand/images/What it's like to go ice climbing in Ouray….jpg
+brand/images/White Water Rafting.jpg
+brand/images/White Water Rafting_1.jpg
+
+# Dev
+node_modules/
+package.json
+netlify.toml

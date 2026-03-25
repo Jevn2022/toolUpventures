@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chi Siamo — UpVentures</title>
+<meta name="description" content="UpVentures è un Tech Venture Building Studio con sede a Torino. Scopri la nostra missione, il team e il metodo.">
+<link rel="icon" href="brand/images/favicon.svg" type="image/svg+xml">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1d1d1f;--white:#fff;--off:#f5f5f7;--orange:#FF5900;--teal:#0A8A6E;
+  --muted:#6e6e73;--b1:#e5e5ea;--faint:#aeaeb2;
+  --ffp:-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  --ffm:'SF Mono','Fira Code',monospace;
+  --px:52px;
+}
+body{font-family:var(--ffp);background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:var(--orange);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(245,245,247,.92);backdrop-filter:blur(20px);
+  border-bottom:0.5px solid var(--b1);
+  padding:0 var(--px);height:56px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo svg{width:28px;height:28px}
+.nav-name{font-family:var(--ffm);font-size:13px;letter-spacing:.08em;color:var(--ink)}
+.nav-back{font-size:13px;color:var(--muted);cursor:pointer;transition:color .18s}
+.nav-back:hover{color:var(--ink)}
+.nav-back::before{content:'← ';opacity:.5}
+
+/* HERO */
+.pg-hero{
+  padding:96px var(--px) 72px;
+  border-bottom:0.5px solid var(--b1);
+}
+.pg-ey{
+  font-family:var(--ffm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:20px;display:flex;align-items:center;gap:8px;
+}
+.pg-ey::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);display:inline-block}
+.pg-h1{font-size:clamp(42px,6vw,80px);font-weight:800;line-height:.95;letter-spacing:-.03em;margin-bottom:28px}
+.pg-h1 span{color:var(--orange)}
+.pg-lead{font-size:clamp(16px,1.8vw,20px);font-weight:300;line-height:1.7;color:var(--muted);max-width:620px}
+
+/* SECTIONS */
+.pg-section{padding:80px var(--px);border-bottom:0.5px solid var(--b1)}
+.pg-section:last-child{border-bottom:none}
+.pg-section.dark{background:var(--ink);color:#fff}
+.pg-section.smoke{background:var(--off)}
+.sec-label{
+  font-family:var(--ffm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--faint);margin-bottom:40px;
+}
+.pg-section.dark .sec-label{color:rgba(255,255,255,.3)}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
+.col-h{font-size:clamp(26px,3vw,38px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:20px}
+.col-p{font-size:16px;font-weight:300;line-height:1.78;color:var(--muted);margin-bottom:14px}
+.pg-section.dark .col-h{color:#fff}
+.pg-section.dark .col-p{color:rgba(255,255,255,.55)}
+
+/* VALUES GRID */
+.val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--b1);border-radius:20px;overflow:hidden;margin-top:48px}
+.val-card{background:var(--white);padding:36px 30px}
+.pg-section.smoke .val-card{background:var(--off)}
+.val-n{font-family:var(--ffm);font-size:9px;letter-spacing:.2em;color:var(--faint);margin-bottom:14px}
+.val-title{font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-.01em}
+.val-body{font-size:14px;font-weight:300;line-height:1.7;color:var(--muted)}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0.5px;background:rgba(255,255,255,.08);border-radius:16px;overflow:hidden;margin-top:56px}
+.stat-item{background:rgba(255,255,255,.04);padding:36px 28px;text-align:center}
+.stat-n{font-size:46px;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1}
+.stat-n sup{font-size:22px;font-weight:400;color:var(--orange)}
+.stat-l{font-size:11px;font-weight:400;color:rgba(255,255,255,.45);letter-spacing:.06em;text-transform:uppercase;margin-top:10px;line-height:1.4}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.team-card{border:0.5px solid var(--b1);border-radius:20px;padding:32px 28px}
+.team-role{font-family:var(--ffm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.team-name{font-size:20px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.team-bio{font-size:14px;font-weight:300;line-height:1.7;color:var(--muted)}
+
+/* CTA BAND */
+.cta-band{
+  background:var(--ink);padding:80px var(--px);text-align:center;
+}
+.cta-band h2{font-size:clamp(32px,4vw,52px);font-weight:800;color:#fff;letter-spacing:-.025em;margin-bottom:16px}
+.cta-band p{font-size:17px;color:rgba(255,255,255,.5);margin-bottom:36px}
+.cta-btn{
+  display:inline-block;padding:16px 36px;background:var(--orange);color:#fff;
+  border-radius:50px;font-size:15px;font-weight:600;cursor:pointer;
+  text-decoration:none;transition:opacity .18s;
+}
+.cta-btn:hover{opacity:.85;text-decoration:none;color:#fff}
+
+/* FOOTER */
+footer{
+  background:var(--ink);padding:36px var(--px);
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:0.5px solid rgba(255,255,255,.08);
+}
+.footer-copy{font-family:var(--ffm);font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35)}
+.footer-links{display:flex;gap:24px;list-style:none}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .18s;text-decoration:none}
+.footer-links a:hover{color:#fff}
+
+@media(max-width:1024px){
+  :root{--px:40px}
+  .two-col{grid-template-columns:1fr;gap:40px}
+  .val-grid{grid-template-columns:1fr 1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  :root{--px:20px}
+  .val-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr}
+  nav{padding:0 20px}
+  footer{flex-direction:column;gap:16px;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="20" fill="#1d1d1f"/>
+      <path d="M12 26 L20 10 L28 26" stroke="#FF5900" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M15.5 20 L24.5 20" stroke="#FF5900" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <span class="nav-name">UPVENTURES</span>
+  </a>
+  <a class="nav-back" href="index.html">Torna al sito</a>
+</nav>
+
+<!-- HERO -->
+<section class="pg-hero">
+  <div class="pg-ey">Chi Siamo</div>
+  <h1 class="pg-h1">Non esternalizzi<br>l'innovazione.<br><span>La esplori con noi.</span></h1>
+  <p class="pg-lead">UpVentures è un Tech Venture Building Studio con sede a Torino. Affianchiamo imprenditori e aziende nella costruzione di prodotti digitali — dall'idea al mercato, con metodo, velocità e partnership reale.</p>
+</section>
+
+<!-- MISSIONE -->
+<section class="pg-section">
+  <div class="sec-label">La nostra missione</div>
+  <div class="two-col">
+    <div>
+      <h2 class="col-h">Portare ogni progetto alla vetta.</h2>
+    </div>
+    <div>
+      <p class="col-p">Crediamo che ogni idea meritevole debba avere accesso alle competenze, agli strumenti e al supporto operativo per diventare realtà. Non siamo una società di consulenza che consegna presentazioni — siamo partner che si siedono al tavolo, mettono in gioco risorse proprie e rimangono fino al risultato.</p>
+      <p class="col-p">Il nostro approccio si ispira all'alpinismo: ogni spedizione richiede preparazione rigorosa, team affiatati, adattamento costante alle condizioni e la capacità di invertire la rotta quando il percorso cambia. Così lavoriamo.</p>
+      <p class="col-p">Fondata a Torino nel 2024, UpVentures opera al confine tra design, tecnologia e strategia imprenditoriale, con un focus particolare su startup early-stage e divisioni di innovazione interna alle PMI.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALORI -->
+<section class="pg-section smoke">
+  <div class="sec-label">I nostri valori</div>
+  <h2 class="col-h" style="max-width:500px;margin-bottom:0">I principi che guidano ogni decisione.</h2>
+  <div class="val-grid">
+    <div class="val-card">
+      <div class="val-n">01 — VELOCITÀ</div>
+      <div class="val-title">Da idea a MVP in 6–8 settimane</div>
+      <div class="val-body">Non crediamo nei cicli di sviluppo infiniti. Portiamo prodotti sul mercato rapidamente per raccogliere feedback reali e iterare con dati concreti, non ipotesi.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-n">02 — PARTNERSHIP</div>
+      <div class="val-title">Skin in the game</div>
+      <div class="val-body">In alcuni percorsi co-investiamo con il nostro tempo e le nostre competenze. Il nostro successo è allineato al tuo: se il progetto cresce, cresciamo insieme.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-n">03 — TRASPARENZA</div>
+      <div class="val-title">Comunicazione diretta, senza filtri</div>
+      <div class="val-body">Ti diciamo cosa pensiamo davvero del tuo progetto — anche quando non è quello che vuoi sentire. La chiarezza è il fondamento di ogni collaborazione solida.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-n">04 — QUALITÀ</div>
+      <div class="val-title">Standard da prodotto di mercato</div>
+      <div class="val-body">Ogni deliverable che usciamo è pronto per utenti reali. Nessun prototipo da cassetto: costruiamo per funzionare, scalare e convincere investitori e clienti.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-n">05 — METODO</div>
+      <div class="val-title">Processo rigoroso, risultati prevedibili</div>
+      <div class="val-body">Sprint settimanali, milestone chiare, retrospettive oneste. Il metodo Agile adattato alla realtà di una piccola squadra focalizzata sull'obiettivo.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-n">06 — ECOSISTEMA</div>
+      <div class="val-title">Network di talenti selezionati</div>
+      <div class="val-body">Lavoriamo con un network curato di designer, sviluppatori, esperti di growth e legali specializzati in startup. Il team giusto al momento giusto.</div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMERI — dark -->
+<section class="pg-section dark">
+  <div class="sec-label">UpVentures in numeri</div>
+  <h2 class="col-h">Risultati che parlano.</h2>
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-n">6<sup>–8W</sup></div>
+      <div class="stat-l">Da idea a MVP sul mercato</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">98<sup>%</sup></div>
+      <div class="stat-l">Clienti soddisfatti del percorso</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">3<sup>×</sup></div>
+      <div class="stat-l">Crescita media post-lancio</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">15<sup>+</sup></div>
+      <div class="stat-l">Progetti lanciati con successo</div>
+    </div>
+  </div>
+</section>
+
+<!-- COSA FACCIAMO -->
+<section class="pg-section">
+  <div class="sec-label">I nostri percorsi</div>
+  <div class="two-col">
+    <div>
+      <h2 class="col-h">Tre modalità di collaborazione.</h2>
+    </div>
+    <div>
+      <p class="col-p"><strong>Esplorazione</strong> — Validazione strategica dell'idea: analisi di mercato, competitor, utenti target e definizione del modello di business. Il punto di partenza per capire se e come procedere.</p>
+      <p class="col-p"><strong>Spedizione</strong> — Costruzione completa del prodotto: design, sviluppo, brand, go-to-market. Dall'idea al prodotto live in 6–8 settimane, con un team dedicato.</p>
+      <p class="col-p"><strong>Summit</strong> — Partnership continuativa per la crescita: scaling, fundraising support, ottimizzazione del prodotto. Per chi è già sul mercato e vuole accelerare.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Pronto a esplorare?</h2>
+  <p>Prenota una call gratuita di 30 minuti. Nessun impegno.</p>
+  <a class="cta-btn" href="https://calendar.app.google/MAq8WTijMrcG9ipS6" target="_blank">Prenota una Call →</a>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 UpVentures — Tech Venture Studio · Torino</div>
+  <ul class="footer-links">
+    <li><a href="about.html" target="_blank">Chi Siamo</a></li>
+    <li><a href="privacy.html" target="_blank">Privacy</a></li>
+    <li><a href="terms.html" target="_blank">Terms</a></li>
+    <li><a href="https://www.facebook.com/people/UpVentures/61588547520336/" target="_blank">Facebook</a></li>
+    <li><a href="https://instagram.com/upventures.io" target="_blank">Instagram</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

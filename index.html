@@ -485,20 +485,22 @@ button{font-family:var(--ffp);cursor:pointer;border:none;background:none}
 .pb-value span{color:var(--orange)}
 
 /* ─── FOUNDER ────────────────────────────────────────────────────────────── */
-.founder-grid{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
-.founder-avatar-wrap{width:180px;height:180px;border-radius:22px;flex-shrink:0;overflow:hidden;
-  border:0.5px solid var(--b2);box-shadow:0 16px 48px rgba(0,0,0,.12)}
+.founder-card{display:flex;align-items:center;gap:40px;
+  background:var(--off);border:0.5px solid var(--b2);border-radius:24px;
+  padding:40px;max-width:720px}
+.founder-card-body{flex:1}
+.founder-avatar-wrap{width:120px;height:120px;border-radius:18px;flex-shrink:0;overflow:hidden;
+  border:0.5px solid var(--b2);box-shadow:0 12px 36px rgba(0,0,0,.10)}
 .founder-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-.founder-bio{font-size:16px;font-weight:300;line-height:1.78;color:var(--muted);max-width:580px;margin-bottom:26px}
-.founder-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.founder-tag{font-family:var(--ffm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--ink2);background:var(--off);border:0.5px solid var(--b2);padding:6px 14px;border-radius:100px}
-.founder-tag.hi{color:var(--orange);background:var(--ort);border-color:rgba(255,89,0,.22)}
-.founder-links{display:flex;gap:10px}
-.founder-link{font-size:13px;font-weight:500;color:var(--teal);display:inline-flex;align-items:center;
-  gap:6px;text-decoration:none;padding:7px 15px;border-radius:8px;
-  border:0.5px solid rgba(26,80,224,.2);background:var(--tlt);transition:background .18s,border-color .18s}
-.founder-link:hover{background:rgba(26,80,224,.14);border-color:rgba(26,80,224,.38)}
+.founder-name{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-bottom:3px}
+.founder-role{font-family:var(--ffm);font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:14px}
+.founder-bio-short{font-size:14px;font-weight:300;line-height:1.7;color:var(--muted);margin-bottom:20px}
+.founder-cta{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;
+  color:var(--teal);text-decoration:none;border:0.5px solid rgba(26,80,224,.25);
+  background:rgba(26,80,224,.06);padding:8px 18px;border-radius:8px;
+  transition:background .18s,border-color .18s}
+.founder-cta:hover{background:rgba(26,80,224,.14);border-color:rgba(26,80,224,.4)}
 
 /* ─── PILLARS (sport photos) ─────────────────────────────────────────────── */
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;
@@ -1373,8 +1375,8 @@ footer{
   .photo-badge{display:none}
 
   /* Founder */
-  .founder-grid{grid-template-columns:1fr;gap:28px}
-  .founder-avatar-wrap{width:110px;height:110px;border-radius:16px}
+  .founder-card{flex-direction:column;align-items:flex-start;gap:24px;padding:28px}
+  .founder-avatar-wrap{width:90px;height:90px;border-radius:14px}
 
   /* Footer */
   footer{padding:28px var(--px);flex-direction:column;gap:16px;text-align:center}
@@ -1832,30 +1834,15 @@ footer{
 <section class="sec sec-white" id="sec-founder">
   <div class="inner">
     <div class="ey rv"><div class="ey-dot"></div>Chi c&rsquo;&egrave; dietro</div>
-    <div class="founder-grid rv d1">
+    <div class="founder-card rv d1">
       <div class="founder-avatar-wrap">
-        <img class="founder-img" src="brand/images/founder.jpg" alt="Founder UpVentures" loading="lazy">
+        <img class="founder-img" src="brand/images/founder.jpg" alt="Davide Maria Giacomini" loading="lazy">
       </div>
-      <div>
-        <div class="founder-bio">Ho costruito e lanciato prodotti AI in 4 mercati internazionali, guidato venture in programmi top-tier e lavorato come PM su progetti enterprise. UpVentures nasce dall&rsquo;esperienza diretta: so cosa significa costruire qualcosa da zero, con risorse limitate e la pressione del mercato.</div>
-        <div class="founder-tags rv d2">
-          <span class="founder-tag hi">EIR @ Vento</span>
-          <span class="founder-tag hi">Head of Ventures @ Kakashi</span>
-          <span class="founder-tag hi">Tech PM @ IQVIA</span>
-          <span class="founder-tag">AI PM &mdash; 4 mercati internazionali</span>
-          <span class="founder-tag">Politecnico di Milano</span>
-          <span class="founder-tag">Strathclyde Business School</span>
-        </div>
-        <div class="founder-links rv d3">
-          <a class="founder-link" href="https://www.linkedin.com/in/davide-mariagiacomini" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            LinkedIn
-          </a>
-          <a class="founder-link" href="https://davidegiacomini.substack.com/" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v2.5H4z"/><path d="M4 9.5h16V12L12 18 4 12V9.5z"/></svg>
-            Blog
-          </a>
-        </div>
+      <div class="founder-card-body">
+        <div class="founder-name">Davide Maria Giacomini</div>
+        <div class="founder-role">Founder &amp; Venture Architect &mdash; Torino</div>
+        <p class="founder-bio-short">Prodotti AI lanciati in 4 mercati internazionali. EIR, Head of Ventures, Tech PM. UpVentures &egrave; l&rsquo;esperienza diretta distillata in un metodo.</p>
+        <a class="founder-cta" href="founder.html" target="_blank">Scopri chi sono &#x2192;</a>
       </div>
     </div>
   </div>

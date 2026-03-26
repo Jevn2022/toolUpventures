@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi c'è Dietro — UpVentures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px}
+body{
+  font-family:"Pathway Extreme",-apple-system,sans-serif;
+  background:#ffffff;color:#1d1d1f;
+  -webkit-font-smoothing:antialiased;
+  padding:0 0 80px;
+}
+.top-nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 52px;height:60px;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:0.5px solid rgba(0,0,0,.08);
+}
+.back-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:#1d1d1f;text-decoration:none;opacity:.7;transition:opacity .18s;
+}
+.back-link:hover{opacity:1}
+.nav-brand{font-size:14px;font-weight:700;color:#1d1d1f;letter-spacing:-.01em}
+.page-body{max-width:1060px;margin:0 auto;padding:64px 52px 0}
+:root{
+  --white:#ffffff;
+  --off:#f5f5f7;
+  --ink:#1d1d1f;
+  --ink2:#3a3a3c;
+  --muted:#6e6e73;
+  --orange:#ff5900;
+  --ort:rgba(255,89,0,.09);
+  --teal:#1a50e0;
+  --tlt:rgba(26,80,224,.09);
+  --b1:rgba(0,0,0,.08);
+  --b2:rgba(0,0,0,.12);
+  --ffm:"DM Mono",monospace;
+  --sp:cubic-bezier(.22,1,.36,1);
+}
+.inner{max-width:1060px;margin:0 auto}
+
+.ey{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--ffm);font-size:10px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:32px;
+}
+.ey-dot{width:5px;height:5px;border-radius:50%;background:var(--orange)}
+
+.founder-grid{
+  display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center;
+}
+.founder-avatar-wrap{
+  width:180px;height:180px;border-radius:22px;flex-shrink:0;overflow:hidden;
+  border:0.5px solid var(--b2);
+  box-shadow:0 16px 48px rgba(0,0,0,.12);
+}
+.founder-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.founder-name{font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-.025em;margin-bottom:5px}
+.founder-role{font-size:14px;font-weight:400;color:var(--muted);margin-bottom:22px}
+.founder-bio{
+  font-size:16px;font-weight:300;line-height:1.78;color:var(--muted);
+  max-width:580px;margin-bottom:26px;
+}
+.founder-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.founder-tag{
+  font-family:var(--ffm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink2);background:var(--off);border:0.5px solid var(--b2);
+  padding:6px 14px;border-radius:100px;
+}
+.founder-tag.hi{color:var(--orange);background:var(--ort);border-color:rgba(255,89,0,.22)}
+.founder-links{display:flex;gap:10px}
+.founder-link{
+  font-size:13px;font-weight:500;color:var(--teal);
+  display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+  padding:7px 15px;border-radius:8px;
+  border:0.5px solid rgba(26,80,224,.2);background:var(--tlt);
+  transition:background .18s,border-color .18s;
+}
+.founder-link:hover{background:rgba(26,80,224,.14);border-color:rgba(26,80,224,.38)}
+
+@media(max-width:768px){
+  body{padding:60px 28px}
+  .founder-grid{grid-template-columns:1fr;gap:28px}
+  .founder-avatar-wrap{width:110px;height:110px;border-radius:16px}
+}
+@media(max-width:480px){body{padding:40px 20px}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="back-link" href="index.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    UpVentures
+  </a>
+  <span class="nav-brand">Chi c&rsquo;&egrave; dietro</span>
+</nav>
+<div class="page-body">
+  <div class="ey"><div class="ey-dot"></div>Chi c&rsquo;&egrave; dietro</div>
+  <div class="founder-grid">
+    <div class="founder-avatar-wrap">
+      <img src="brand/images/founder.jpg" alt="Davide Maria Giacomini" class="founder-img">
+    </div>
+    <div>
+      <div class="founder-name">Davide Maria Giacomini</div>
+      <div class="founder-role">Founder &amp; Venture Architect &mdash; Torino</div>
+      <p class="founder-bio">Ho costruito e lanciato prodotti AI in 4 mercati internazionali, guidato venture in programmi top-tier e lavorato come PM su progetti enterprise. UpVentures nasce dall&rsquo;esperienza diretta: so cosa significa costruire qualcosa da zero, con risorse limitate e la pressione del mercato.</p>
+      <div class="founder-tags">
+        <span class="founder-tag hi">EIR @ Vento</span>
+        <span class="founder-tag hi">Head of Ventures @ Kakashi</span>
+        <span class="founder-tag hi">Tech PM @ IQVIA</span>
+        <span class="founder-tag">AI PM &mdash; 4 mercati internazionali</span>
+        <span class="founder-tag">Politecnico di Milano</span>
+        <span class="founder-tag">Strathclyde Business School</span>
+      </div>
+      <div class="founder-links">
+        <a class="founder-link" href="https://www.linkedin.com/in/davide-mariagiacomini" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="founder-link" href="https://davidegiacomini.substack.com/" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v2.5H4z"/><path d="M4 9.5h16V12L12 18 4 12V9.5z"/></svg>
+          Blog
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

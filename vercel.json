@@ -1,4 +1,4 @@
 {
-  "buildCommand": "sed -i \"s|YOUR_OPENAI_API_KEY_HERE|$OPENAI_KEY|g\" generatore_preventivi_tecnici_b2b.html",
-  "outputDirectory": "."
+  "buildCommand": "mkdir -p _out && cp generatore_preventivi_tecnici_b2b.html _out/index.html && sed -i \"s|YOUR_OPENAI_API_KEY_HERE|$OPENAI_KEY|g\" _out/index.html",
+  "outputDirectory": "_out"
 }
